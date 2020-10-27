@@ -17,7 +17,7 @@ class Item extends React.Component{
                 <td><span>{item.isCompleted?"Yes":"No"}</span></td>
                 <td>{item.isShowed?
                         <span className="w3-btn w3-red" onClick={()=>{removeItem(item.id)}}>Done</span>:
-                        <span>Archived</span>}
+                        <button className="w3-btn" disabled>Archived</button>}
                 </td>
             </tr>
         );

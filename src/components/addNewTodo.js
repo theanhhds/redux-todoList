@@ -26,7 +26,8 @@ class AddNewToDo extends React.Component{
             isCompleted: false,
             isShowed: true
         };
-        this.props.addNewTodo(newItem);
+        if (this.state.input_name != "")
+            this.props.addNewTodo(newItem);
 
         this.setState({input_name: ''});
     }

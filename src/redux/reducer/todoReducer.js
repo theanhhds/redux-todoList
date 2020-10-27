@@ -2,12 +2,7 @@ import * as ActionType from '../constants/todoConstants';
 
 const initialState = {
     todo_list : [
-        {
-            id: 0,
-            name: "Add something to this list",
-            isCompleted: false,
-            isShowed : true,
-        }
+        
     ],
 }
 
@@ -23,9 +18,9 @@ export const todoReducer = (state = initialState, action) => {
             return {...state, 
                 todo_list: state.todo_list.map(todo => {
                     if (todo.id === id)
-                    return {...todo, isCompleted: true, isShowed: false}
+                        return {...todo, isCompleted: true, isShowed: false}
                     else
-                    return todo;
+                        return todo;
                 })
             }
 
