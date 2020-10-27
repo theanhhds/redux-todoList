@@ -18,6 +18,17 @@ export const todoReducer = (state = initialState, action) => {
             // console.log(listNew);
             return {...state, todo_list: listNew}
 
+        case ActionType.REMOVE_ITEM_BY_ID:
+            let id = action.payload;
+            return {...state, 
+                todo_list: state.todo_list.map(todo => {
+                    if (todo.id === id)
+                    return {...todo, isCompleted: true, isShowed: false}
+                    else
+                    return todo;
+                })
+            }
+
         default:
             break;
     }

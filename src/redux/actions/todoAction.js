@@ -6,3 +6,10 @@ export const actAddNewItem = item => {
         payload: item,
     }
 }
+
+export const actRemoveItemById = id => {
+    return {
+        type: ActionType.REMOVE_ITEM_BY_ID,
+        payload: id,
+    }
+}
